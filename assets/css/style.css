@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    font-family: robo;
+}
+
+:root {
+    --color: #2a2953;
+    --bg: #8ac0cc;
+    --sec: #d69e2e;
+    --black: #141414;
+    --white: #fff;
+    --light: rgb(184, 221, 233);
+    --gray: gray;
+}
+
+@font-face {
+    font-family: robo;
+    src: url(../font/Roboto/Roboto-Medium.ttf);
+}
+
+
+body {
+    background-color: var(--bg) !important;
+}
+
+
+
+.navbar a {
+    font-size: 0.7em;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--color) !important;
+}
+
+.navbar i {
+    color: var(--color);
+}
+
+
+/* //////////////////////////////Navbar section //////////////////////////// */
+
+.navbar {
+    flex-wrap: nowrap !important;
+    position: relative;
+}
+
+.navbar .nav-png1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(0%, 100%);
+}
+
+.navbar .nav-png2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(0%, 100%);
+}
+
+.top-nav-con {
+    height: 60px;
+}
+
+/* nav */
+
+.navbar .navbar-brand {
+    width: 10%;
+    height: 70px;
+}
+
+.navbar .navbar-brand img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.navbar {
+    position: sticky !important;
+    top: 0%;
+    left: 0%;
+    transition: top 1s ease-out 0s !important;
+    width: 100% !important;
+    /* min-height: 60px; */
+    padding: 0 !important;
+    z-index: 200;
+}
+
+.stick {
+    transition: top 1s ease-out 0s !important;
+    width: 100% !important;
+
+}
+
+/* Remove border from toggler */
+.navbar-toggler {
+    border: 0 !important;
+}
+
+
+.navbar .container-fluid {
+    padding: 0% !important;
+    border-bottom: 0.5px solid var(--gray) !important;
+}
+
+
+.navbar .collapse form {
+    width: 40%;
+}
+
+.navbar .navbar-nav {
+    padding: 1%;
+}
+
+.navbar .navbar-nav .nav-item a {
+    font-size: 15px;
+
+}
+
+.navbar form i {
+    color: var(--white);
+}
+
+
+.navbar form input {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: none;
+}
+
+.nave-hide {
+    width: 10%;
+}
+
+.nave-hide a {
+    font-size: 20px;
+}
+
+.navbar form button {
+    color: var(--white);
+    border: none;
+    background: var(--color) !important;
+    transition: 0.5s all ease;
+}
+
+.navbar .collapse form button:hover {
+    background: var(--sec);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: var(--white);
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar {
+    margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+
+
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: var(--color);
+}
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown .dropdown-menu {
+    background-color: var(--color);
+}
+
+
+.dropdown .dropdown-menu a {
+    color: var(--white) !important;
+}
+
+
+.dropdown .dropdown-menu li:hover a {
+    color: var(--color) !important;
+}
+
+.offcanvas-header {
+    background-color: var(--bg);
+}
+
+.offcanvas-header img {
+    width: 20%;
+}
+
+.offcanvas-header .btn-close {
+    color: var(--sec) !important;
+}
+
+.offcanvas-body {
+    background-color: var(--bg);
+}
+
+
+.main-c {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-c i {
+    font-size: 16px;
+}
+
+.c-box {
+    position: absolute;
+    top: -20%;
+    right: -30%;
+    background-color: black;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    color: var(--sec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-box p {
+    color: var(--sec);
+    font-size: 10px;
+    margin: 0% !important;
+}
+
+/* banner section  */
+
+.hero-section{
+    width: 100%;
+    height: 80vh;
+}
+
+.hero-section .carouselExampleFade{
+    width: 100%;
+    height: 100%;
+}
+
+
+.hero-section .carousel{
+    width: 100%;
+    height: 100%;
+}
+
+.hero-section .carousel .carousel-inner{
+    width: 100%;
+    height: 100%;
+}
+
+.hero-section .carousel .carousel-inner .carousel-item{
+    width: 100%;
+    height: 100%;
+}
+.hero-section .carousel .carousel-inner .carousel-item img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:320px) {
+
+    .welcome-content p {
+        color: var(--white);
+        font-size: 10px !important;
+    }
+
+    /* //////////////////////////////////////////////////// */
+
+    .welcome-social-links {
+        display: flex;
+        width: 40%;
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    .welcome-social-links .front-links a {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 8px !important;
+
+    }
+
+    /*/////////////////// navbar ////////////////////////////////////////// */
+
+    /* nav */
+
+    .navbar .navbar-brand {
+        width: 20%;
+        height: 90px;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .navbar .collapse form {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+
+
+
+
+}
+
+@media screen and (min-width:321px) and (max-width:425px) {
+
+    .welcome-content p {
+        color: var(--white);
+        font-size: 10px !important;
+        font-family: 'Sintony', sans-serif;
+    }
+
+    /* //////////////////////////////////////////////////// */
+
+    .welcome-social-links {
+        display: flex;
+        width: 40%;
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    .welcome-social-links .front-links a {
+        text-decoration: none;
+        color: var(--white);
+        font-size: 8px !important;
+        font-family: 'Sintony', sans-serif;
+
+    }
+
+    /*/////////////////// navbar ////////////////////////////////////////// */
+
+    /* nav */
+
+    .navbar .navbar-brand {
+        width: 20%;
+        height: 90px;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .navbar .collapse form {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+}
+
+@media screen and (min-width:426px) and (max-width:600px) {
+    /* //////////////////////////////////////////////////// */
+
+    .welcome-social-links {
+        display: flex;
+        width: 40%;
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    /*/////////////////// navbar ////////////////////////////////////////// */
+
+    /* nav */
+
+    .navbar .navbar-brand {
+        width: 20%;
+        height: 90px;
+    }
+
+    .navbar .navbar-brand img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .navbar .collapse form {
+        width: 80%;
+    }
+
+}
+
+@media screen and (min-width:601px) and (max-width:768px) {
+    /* //////////////////////////////////////////////////// */
+
+    .welcome-social-links {
+        display: flex;
+        width: 30%;
+        gap: 15px;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:900px) {}
+
+@media screen and (min-width:901px) and (max-width:992px) {}
+
+@media screen and (min-width:993px) and (max-width:1024px) {}
+
+@media screen and (min-width:1025px) and (max-width:1140px) {}
+
+
+
+/* Constent Queries  */
+
+@media screen and (max-width:992px) {
+    .dropdown .dropdown-menu {
+        background-color: var(--c2);
+    }
+
+    .navbar .navbar-nav .nav-item .nav-link {
+        color: var(--c2) !important;
+    }
+}
